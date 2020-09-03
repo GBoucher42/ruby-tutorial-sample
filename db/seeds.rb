@@ -3,7 +3,9 @@ User.create!(name:  "Gabriel Boucher",
   email: "gboucher93@gmail.com",
   password:              "test12345",
   password_confirmation: "test12345",
-  admin: true)
+  admin: true,
+  activated: true,
+  activated_at: Time.zone.now)
 
 # Generate a bunch of additional users.
 99.times do |n|
@@ -14,5 +16,7 @@ User.create!(name:  name,
     email: email,
     password:              password,
     password_confirmation: password,
-    admin: false)
+    admin: false,
+    activated: true,
+    activated_at: Time.zone.now)
 end
